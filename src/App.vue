@@ -1,7 +1,8 @@
 <template>
-  <div id="app">
-    <IndexPage />
-    <TechPage />
+  <div id="app"
+   v-bind:class="{move: move}"
+   @click="startMove"
+   >
   </div>
 </template>
 
@@ -14,6 +15,11 @@
     components: {
       IndexPage,
       TechPage
+    },
+    methods: {
+      startMove () {
+        this.move = true
+      }
     }
   }
 </script>
@@ -22,12 +28,19 @@
   body
     margin 0
     padding 0
+    background red
   #app
     height 100vh
     width 100vw
     position relative
-    > div
-      position absolute
-      top 0
-      left 0
+  .move
+    animation moveUp 0.5s forwards
+
+  @keyframes moveUp
+    0% {
+      transform translate(0, 0)
+    }
+    100% {
+      transform translate(0, -100%)
+    }
 </style>
