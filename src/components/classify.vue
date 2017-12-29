@@ -1,15 +1,9 @@
 <template>
     <div
-        class="tech-page"
+        class="classify-page"
         v-bind:class="{move: move}"
         @click="startMove"
     >
-        <h2>
-            专业技能
-        </h2>
-        <div class="techImg">
-         
-        </div>
     </div>
 </template>
 
@@ -29,7 +23,7 @@
 </script>
 
 <style lang="stylus">
-    .tech-page
+    .classify-page
         height 100vh
         width 100vw
         background #212136
