@@ -1,6 +1,6 @@
 <template>
   <div
-    class="guide-page"
+    class="skills-page"
     v-bind:class="{move: move}"
     @click="startMove"
   >
@@ -40,7 +40,7 @@
 </script>
 
 <style lang="stylus">
-  .guide-page
+  .skills-page
     width 100vw
     height 100vh
     display flex
@@ -99,6 +99,6 @@
       transform translate(0, 0)
     }
     100% {
-      transform translate(0, -100%)
+      transform translate(0, 100%)
     }
 </style>

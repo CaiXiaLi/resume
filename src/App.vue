@@ -16,7 +16,6 @@
     name: 'app',
     data () {
       return{
-        img1: require('@Images/1_01.png'),
         move: false
       }
     },
@@ -36,7 +35,7 @@
   body
     margin 0
     padding 0
-    background red
+    // background red
   #app
     height 100vh
     width 100vw
