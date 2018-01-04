@@ -1,8 +1,7 @@
 <template>
   <div
     class="wechat-page"
-    v-bind:class="{move: move}"
-    @click="startMove"
+
   >
     <div class="backgroundImage">
       <img :src="img2"  class="animated fadeInDownBig ">
@@ -46,7 +45,7 @@
     display flex
     flex-direction column
     justify-content space-around
-    z-index 9
+    z-index 3
     background-image url('/static/images/1_01.png')
     background-repeat no-repeat
     background-size cover

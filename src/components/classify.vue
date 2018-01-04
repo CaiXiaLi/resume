@@ -1,8 +1,6 @@
 <template>
     <div
         class="classify-page"
-        v-bind:class="{move: move}"
-        @click="startMove"
     >
        <div class="imageList">
           <img :src="img1"  class="animated fadeInDown ">

@@ -5,13 +5,22 @@
    >
     <GuidePage/>
     <ClassifyPage/>
+    <MyInformation/>
+    <WorkExperience/>
+    <Skills/>
+    <Shows/>
+    <Wechat/>
   </div>
 </template>
 
 <script>
   import GuidePage from './components/guide.vue'
   import ClassifyPage from './components/classify.vue'
-
+  import MyInformation from './components/myInformation.vue'
+  import WorkExperience from './components/workExperience.vue'
+  import Skills from './components/skills.vue'
+  import Shows from './components/shows.vue'
+  import Wechat from './components/wechat.vue'
   export default {
     name: 'app',
     data () {
@@ -21,11 +30,17 @@
     },
     components: {
       GuidePage,
-      ClassifyPage
+      ClassifyPage,
+      MyInformation,
+      WorkExperience,
+      Skills,
+      Shows,
+      Wechat
     },
     methods: {
       startMove () {
         this.move = true
+        console.log("1ture")
       }
     }
   }
@@ -35,7 +50,7 @@
   body
     margin 0
     padding 0
-    // background red
+    background red
   #app
     height 100vh
     width 100vw
@@ -47,6 +62,6 @@
       transform translate(0, 0)
     }
     100% {
-      transform translate(0, -100%)
+      transform translate(0, 100%)
     }
 </style>

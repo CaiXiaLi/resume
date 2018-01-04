@@ -1,8 +1,6 @@
 <template>
   <div
     class="guide-page"
-    v-bind:class="{move: move}"
-    @click="startMove"
   >
     <div class="backgroundImage">
       <img :src="img2"  class="animated fadeInDownBig ">
@@ -26,15 +24,10 @@
         img7: require('@Images/1_07.png'),
         img8: require('@Images/1_08.png'),
         img9: require('@Images/1_09.png'),
-        img10: require('@Images/1_10.png'),
-        move: false
+        img10: require('@Images/1_10.png')
       }
     },
     methods: {
-      startMove () {
-        this.move = true
-        console.log("1ture")
-      }
     }
   }
 </script>
@@ -99,6 +92,6 @@
       transform translate(0, 0)
     }
     100% {
-      transform translate(0, -100%)
+      transform translate(0, 100%)
     }
 </style>

@@ -55,5 +55,4 @@ new Vue(
   template: '<Wechat/>',
   components: { Wechat }
 }
-
 )
