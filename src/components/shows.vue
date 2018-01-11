@@ -4,13 +4,14 @@
 
   >
     <div class="backgroundImage">
-      <img :src="img2"  class="animated fadeInDownBig ">
+      展示
+      <!-- <img :src="img2"  class="animated fadeInDownBig ">
       <img :src="img3"  class="animated swing infinite">
       <img :src="img6" class="animated slideInRight ">
       <img :src="img7" >
       <img :src="img8" >
       <img :src="img9" class="animated jello ">
-      <img :src="img10" class="animated rotateIn ">
+      <img :src="img10" class="animated rotateIn "> -->
     </div>
   </div>
 </template>
@@ -45,11 +46,11 @@
     display flex
     flex-direction column
     justify-content space-around
-    z-index 4
+    z-index 6
     background-image url('/static/images/1_01.png')
     background-repeat no-repeat
     background-size cover
-    // position absolute
+    position absolute
     .backgroundImage
       position relative
       width 100vw
