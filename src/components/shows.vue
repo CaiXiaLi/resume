@@ -19,11 +19,6 @@
 			>
 			</div>
 		</div>
-		<div class="footer_btn">
-			<img :src="img1" >
-			<img :src="img2" >
-		</div>
-		</div>
 	</div>
 </template>
 
@@ -88,7 +83,7 @@ export default {
 	.imager__wrapper
 		width 100vw
 		display flex
-		margin-top 15vh
+		margin-top 20vh
 		align-items strecth
 		justify-content space-between
 	.imager__content
@@ -100,4 +95,17 @@ export default {
 		position absolute
 		width 60vw
 		transition all .5s ease
+	.footer_btn
+		position absolute
+		width 100%
+		bottom 20%
+		left 0
+		img:nth-of-type(1)
+			position absolute
+			width 30%
+			left 2%
+		img:nth-of-type(2)
+			position absolute
+			width 26%
+			right 2%
 </style>

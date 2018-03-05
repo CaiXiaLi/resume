@@ -3,16 +3,16 @@
 		class="classify-page"
 	>
 		<div class="imageList">
-			<img :src="img1" class="animated fadeInDown ">
-			<img :src="img2" class="animated fadeInRight ">
-			<img :src="img3" class="animated swing infinite">
-			<img :src="img4" class="animated pulse infinite">
+			<img :src="img1" class="animated fadeInDown " @click.stop="changePageIndex(4)">
+			<img :src="img2" class="animated fadeInRight " @click.stop="changePageIndex(5)">
+			<img :src="img3" class="animated swing infinite" >
+			<img :src="img4" class="animated pulse infinite" @click.stop="changePageIndex(3)">
 			<img
 				:src="img5"
-				@click.stop="changePageIndex"
+				@click.stop="changePageIndex(6)"
 				class="animated flip infinite"
 			>
-			<img :src="img6" class="animated slideInUp ">
+			<img :src="img6" class="animated slideInUp" @click.stop="changePageIndex(7)">
 		</div>
 	</div>
 </template>
@@ -27,6 +27,7 @@
 
 		data () {
 			return {
+				currentIndex:2,
 				img1: require('@Images/2-01.png'),
 				img2: require('@Images/2-02.png'),
 				img3: require('@Images/2-03.png'),
@@ -36,8 +37,9 @@
 			}
 		},
 		methods: {
-			changePageIndex () {
-				this.$emit('input', 5)
+			changePageIndex(type) {
+				this.type = type
+				console.log(currentIndex)
 			}
 		},
 	}

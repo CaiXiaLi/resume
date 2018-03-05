@@ -28,7 +28,7 @@
 		name: 'app',
 		data () {
 			return{
-				currentIndex: 6,
+				currentIndex: 2,
 			}
 		},
 		components: {
