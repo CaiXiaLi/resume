@@ -1,5 +1,9 @@
 <template>
 	<div class="skills-page">
+		<div class="icon rs-left1"
+			@click="$emit('onChange', 1)"
+		>
+		</div>
 		<div class="backgroundImage">
 			<img :src="img1" >
 			<img :src="img2" >
@@ -69,12 +73,15 @@
 		height 100vh
 		display flex
 		flex-direction column
-		justify-content space-around
+		justify-content space-start
 		z-index 5
 		background-image url('/static/images/1_01.png')
 		background-repeat no-repeat
 		background-size cover
 		position absolute
+		.rs-left1
+			font-size 30px
+			padding 5vh 4vw
 		.backgroundImage
 			img:nth-of-type(1)
 				position absolute
@@ -98,8 +105,8 @@
 				width 15%
 		ul
 			list-style-type none
-			padding 0
-			margin 0
+			padding 5vh 2vw
+			margin-top 20vh
 			position absolute
 			li
 				display inline-block

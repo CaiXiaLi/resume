@@ -2,6 +2,10 @@
 	<div
 	class="workExperience-page"
 	>
+		<div class="icon rs-left1"
+			@click="$emit('onChange', 1)"
+		>
+		</div>
 		<div class="Imagelist">
 			<img :src="img1">
 			<img :src="img2">
@@ -46,12 +50,16 @@
 		height 100vh
 		display flex
 		flex-direction column
-		justify-content space-around
+		justify-content space-start
 		z-index 4
 		background-image url('/static/images/1_01.png')
 		background-repeat no-repeat
 		background-size cover
 		position absolute
+		.rs-left1
+			font-size 30px
+			padding 5vw 2vw
+			z-index 4
 		.Imagelist
 			img:nth-of-type(1)
 				position absolute
@@ -87,7 +95,7 @@
 				margin 3vw 0
 			h4:nth-of-type(2)
 				margin-top 10vh
-				color #dadad7    
+				color #dadad7
 			h5
 				margin 3vw 0
 				color #dadad7

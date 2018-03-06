@@ -3,16 +3,33 @@
 		id="app"
 		@click="currentIndex++"
 	>
-		<GuidePage :style="{top: currentIndex > 0 ? 0 : '100vh'}"/>
-		<ClassifyPage
-			v-model="currentIndex"
-			:style="{top: currentIndex > 1 ? 0 : '100vh'}"
+		<GuidePage
+			:style="{top: currentIndex > 0 ? 0 : '100vh'}"
+			@onChange="onIndexChange"
 		/>
-		<MyInformation :style="{top: currentIndex > 2 ? 0 : '100vh'}"/>
-		<WorkExperience :style="{top: currentIndex > 3 ? 0 : '100vh'}"/>
-		<Skills :style="{top: currentIndex > 4 ? 0 : '100vh'}"/>
-		<Shows :style="{top: currentIndex > 5 ? 0 : '100vh'}"/>
-		<Wechat :style="{top: currentIndex > 6 ? 0 : '100vh'}"/>
+		<ClassifyPage
+			:style="{top: currentIndex > 1 ? 0 : '100vh'}"
+			@onChange="onIndexChange"
+		/>
+		<MyInformation
+			:style="{top: currentIndex > 2 ? 0 : '100vh'}"
+			@onChange="onIndexChange"
+		/>
+		<WorkExperience
+			:style="{top: currentIndex > 3 ? 0 : '100vh'}"
+			@onChange="onIndexChange"
+		/>
+		<Skills
+			:style="{top: currentIndex > 4 ? 0 : '100vh'}"
+			@onChange="onIndexChange"
+		/>
+		<Shows
+			:style="{top: currentIndex > 5 ? 0 : '100vh'}"
+			@onChange="onIndexChange"
+		/>
+		<Wechat
+			:style="{top: currentIndex > 6 ? 0 : '100vh'}"
+		/>
 	</div>
 </template>
 
@@ -28,7 +45,7 @@
 		name: 'app',
 		data () {
 			return{
-				currentIndex: 2,
+				currentIndex: 1,
 			}
 		},
 		components: {
@@ -41,10 +58,10 @@
 			Wechat
 		},
 		methods: {
-			startMove () {
-				this.move = true
-				console.log("1ture")
-			}
+			onIndexChange (index) {
+				this.currentIndex = index
+				console.log(this.currentIndex)
+			},
 		}
 	}
 </script>

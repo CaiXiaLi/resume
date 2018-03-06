@@ -3,16 +3,35 @@
 		class="classify-page"
 	>
 		<div class="imageList">
-			<img :src="img1" class="animated fadeInDown " @click.stop="changePageIndex(4)">
-			<img :src="img2" class="animated fadeInRight " @click.stop="changePageIndex(5)">
-			<img :src="img3" class="animated swing infinite" >
-			<img :src="img4" class="animated pulse infinite" @click.stop="changePageIndex(3)">
+			<img
+				:src="img1"
+				class="animated fadeInDown "
+				@click.stop="$emit('onChange', 4)"
+			>
+			<img
+				:src="img2"
+				class="animated fadeInRight "
+				@click.stop="$emit('onChange', 5)"
+			>
+			<img
+				:src="img3"
+				class="animated swing infinite"
+			>
+			<img
+				:src="img4"
+				class="animated pulse infinite"
+				@click.stop="$emit('onChange', 3)"
+			>
 			<img
 				:src="img5"
-				@click.stop="changePageIndex(6)"
+				@click.stop="$emit('onChange', 6)"
 				class="animated flip infinite"
 			>
-			<img :src="img6" class="animated slideInUp" @click.stop="changePageIndex(7)">
+			<img
+				:src="img6"
+				class="animated slideInUp"
+				@click.stop="$emit('onChange', 7)"
+			>
 		</div>
 	</div>
 </template>
@@ -27,19 +46,12 @@
 
 		data () {
 			return {
-				currentIndex:2,
 				img1: require('@Images/2-01.png'),
 				img2: require('@Images/2-02.png'),
 				img3: require('@Images/2-03.png'),
 				img4: require('@Images/2-04.png'),
 				img5: require('@Images/2-05.png'),
 				img6: require('@Images/2-06.png'),
-			}
-		},
-		methods: {
-			changePageIndex(type) {
-				this.type = type
-				console.log(currentIndex)
 			}
 		},
 	}

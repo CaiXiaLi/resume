@@ -1,8 +1,12 @@
 <template>
 	<div class="myInformation-page">
+		<div class="icon rs-left1"
+			@click="$emit('onChange', 1)"
+		>
+		</div>
 		<div class="List">
 			<div class="photo">
-				<img :src="img1"  class="animated fadeInDownBig ">
+				<img :src="img1"  class="animated pulse infinite ">
 				<p>李彩霞</p>
 			</div>
 			<ul>
@@ -33,12 +37,15 @@
 
 <script>
 	export default {
-	data () {
-		return {
-		img1: require('@Images/3-01.png')
-		}
-	},
+	data: () => ({
+		img1: require('@Images/3-01.png'),
+	}),
+
 	methods: {
+		goBlack(index) {
+			console.log('111')
+			this.$emit('onChange', index)
+		}
 	}
 	}
 </script>
@@ -55,6 +62,9 @@
 		background-repeat no-repeat
 		background-size cover
 		position absolute
+		.rs-left1
+			font-size 30px
+			padding-left 5vw
 		.List
 			color #ffffff
 			font-size 5vw

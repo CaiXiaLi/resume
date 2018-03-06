@@ -1,5 +1,9 @@
 <template>
 	<div class="shows-page">
+		<div class="icon rs-xiangzuojiantou"
+			@click="$emit('onChange', 1)"
+			>
+		</div>
 		<div class="imager__wrapper">
 			<div
 				class="icon rs-left1"
@@ -67,6 +71,7 @@ export default {
 	height 100vh
 	display flex
 	flex-direction column
+	justify-content space-start
 	z-index 6
 	background-image url('/static/images/1_01.png')
 	background-repeat no-repeat
@@ -74,20 +79,25 @@ export default {
 	position absolute
 	.icon
 		font-size 40px
-		padding 20vh 1vw
 		z-index 16
+	.rs-xiangzuojiantou
+			font-size 30px
+			padding 5vw
 	.hidden
 		visibility hidden
 	.show
 		visibility visible
 	.imager__wrapper
+		flex 1
 		width 100vw
 		display flex
-		margin-top 20vh
-		align-items strecth
+		align-items center
 		justify-content space-between
+		.icon
+			font-size 50px !important
 	.imager__content
 		width 60vw
+		height 97.86vw
 		// flex 1
 		position relative
 		text-align center
