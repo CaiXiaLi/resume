@@ -3,7 +3,7 @@
 		class="guide-page"
 	>
 		<div class="backgroundImage">
-			<img :src="img2"  class="animated fadeInDownBig ">
+			<img :src="img2"  class="animated fadeInDownBig " >
 			<img :src="img3"  class="animated swing infinite">
 			<img :src="img6" class="animated slideInRight ">
 			<img :src="img7" >
@@ -25,8 +25,6 @@
 				img9: require('@Images/1_09.png'),
 				img10: require('@Images/1_10.png')
 			}
-		},
-		methods: {
 		}
 	}
 </script>

@@ -6,6 +6,7 @@
 			<img
 				:src="img1"
 				class="animated fadeInDown "
+				@click="changeCss()"
 				@click.stop="$emit('onChange', 4)"
 			>
 			<img
@@ -40,10 +41,9 @@
 	export default {
 		props: {
 			value: {
-				type: Number,
-			},
+				type: Number
+			}
 		},
-
 		data () {
 			return {
 				img1: require('@Images/2-01.png'),
@@ -53,7 +53,7 @@
 				img5: require('@Images/2-05.png'),
 				img6: require('@Images/2-06.png'),
 			}
-		},
+		}
 	}
 </script>
 

@@ -62,7 +62,7 @@
 				this.currentIndex = index
 				console.log(this.currentIndex)
 			},
-		}
+		},
 	}
 </script>
 
